@@ -18,8 +18,11 @@ gdown.download(url1, 'customer_data.csv', quiet=False)
 gdown.download(url2, 'product_data.csv', quiet=False)
 
 # Load the downloaded data
-customer_df = pd.read_csv('customer_data.csv')
-product_df = pd.read_csv('product_data.csv')
+
+customer_df = pd.read_csv('customer_data.csv', error_bad_lines=False, warn_bad_lines=True)
+product_df = pd.read_csv('product_data.csv', error_bad_lines=False, warn_bad_lines=True)
+
+
 
 customer_agent = CustomerAgent()
 product_agent = ProductAgent()

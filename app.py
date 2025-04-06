@@ -14,6 +14,7 @@ gdown.download(url2, 'product_data.csv', quiet=False)
 
 # Load the downloaded data
 customer_df = pd.read_csv('customer_data.csv', on_bad_lines='skip')
+st.write("Columns in customer_df:", customer_df.columns.tolist())
 customer_df.columns = customer_df.columns.str.strip()
 product_df = pd.read_csv('product_data.csv', on_bad_lines='skip')
 

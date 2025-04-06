@@ -1,0 +1,10 @@
+*.csv
+*.pkl
+*.h5
+*.zip
+*.mp4
+*.png
+*.jpg
+__pycache__/
+.DS_Store
+.env

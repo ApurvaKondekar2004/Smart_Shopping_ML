@@ -19,8 +19,8 @@ gdown.download(url2, 'product_data.csv', quiet=False)
 
 # Load the downloaded data
 
-customer_df = pd.read_csv('customer_data.csv', error_bad_lines=False, warn_bad_lines=True)
-product_df = pd.read_csv('product_data.csv', error_bad_lines=False, warn_bad_lines=True)
+customer_df = pd.read_csv('customer_data.csv', on_bad_lines='skip')
+product_df = pd.read_csv('product_data.csv', on_bad_lines='skip')
 
 
 

@@ -10,8 +10,8 @@ Base.metadata.create_all(engine)
 
 
 # Google Drive file link converted
-url1 = 'https://drive.google.com/uc?id=YourCustomerDataFileID'
-url2 = 'https://drive.google.com/uc?id=YourProductDataFileID'
+url1 = 'https://drive.google.com/uc?id=1xkgs_Tvn5607Q7FakAEvNGW4jbN3F3g0'
+url2 = 'https://drive.google.com/uc?id=1YTCLpb3z1lvkgS-ZZcM17pYJIG4uM_So'
 
 # Download customer data
 gdown.download(url1, 'customer_data.csv', quiet=False)

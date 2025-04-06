@@ -6,10 +6,11 @@ from database import Base, engine
 
 Base.metadata.create_all(engine)
 
-url1='https://drive.google.com/uc?id=1Xkgs_Tvn56O7Q7FakAEvNGW4jbN3F3gO'
-url='https://drive.google.com/uc?id=1YTCLpb3z1lvkgS-ZZcM17pYJIG4uM_So'
+url1 = 'https://drive.google.com/uc?id=1xkgs_Tvn5607Q7FakAEvNGW4jbN3F3g0'
+url2 = 'https://drive.google.com/uc?id=1YTCLpb3z1lvkgS-ZZcM17pYJIG4uM_So'
+
 customer_df = pd.read_csv(url1)
-product_df = pd.read_csv(url)
+product_df = pd.read_csv(url2)
 
 customer_agent = CustomerAgent()
 product_agent = ProductAgent()

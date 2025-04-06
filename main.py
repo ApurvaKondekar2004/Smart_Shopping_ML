@@ -3,14 +3,23 @@ from agents.customer_agent import CustomerAgent
 from agents.product_agent import ProductAgent
 from agents.recommendation_agent import RecommendationAgent
 from database import Base, engine
+import gdown
 
 Base.metadata.create_all(engine)
 
-url1 = 'https://drive.google.com/uc?id=1xkgs_Tvn5607Q7FakAEvNGW4jbN3F3g0'
-url2 = 'https://drive.google.com/uc?id=1YTCLpb3z1lvkgS-ZZcM17pYJIG4uM_So'
 
-customer_df = pd.read_csv(url1)
-product_df = pd.read_csv(url2)
+
+# Google Drive file link converted
+url1 = 'https://drive.google.com/uc?id=YourCustomerDataFileID'
+url2 = 'https://drive.google.com/uc?id=YourProductDataFileID'
+
+# Download customer data
+gdown.download(url1, 'customer_data.csv', quiet=False)
+gdown.download(url2, 'product_data.csv', quiet=False)
+
+# Load the downloaded data
+customer_df = pd.read_csv('customer_data.csv')
+product_df = pd.read_csv('product_data.csv')
 
 customer_agent = CustomerAgent()
 product_agent = ProductAgent()
